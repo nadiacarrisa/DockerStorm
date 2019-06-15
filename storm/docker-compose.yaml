@@ -1,0 +1,53 @@
+version: '2'
+services:
+  grafana:
+    image: grafana/grafana
+    container_name: storm_grafana
+    restart: always
+    user: "1000"
+    ports:
+      - 3000:3000/tcp
+    env_file:
+      - grafana.env
+
+  zookeeper:
+    image: zookeeper
+    container_name: zookeeper
+    restart: always
+
+  nimbus:
+    image: storm:1.0
+    container_name: nimbus
+    command: storm nimbus
+    restart: always
+    volumes:
+      - ./volumes/storm-nimbus/logs:/logs
+      - ./volumes/storm-nimbus/data:/data
+    links:
+      - zookeeper
+
+  supervisor:
+    image: storm:1.0
+    container_name: supervisor
+    command: storm supervisor
+    restart: always
+    volumes:
+      - ./volumes/storm-supervisor/logs:/logs
+      - ./volumes/storm-supervisor/data:/data
+    links:
+      - zookeeper
+      - nimbus
+  storm_ui:
+    image: storm:1.0
+    container_name: storm_ui
+    command: storm ui
+    restart: always
+    volumes:
+      - ./volumes/storm-ui/logs:/logs
+      - ./volumes/storm-ui/data:/data
+    ports:
+      - 8080:8080
+    links:
+      - zookeeper
+      - nimbus
+

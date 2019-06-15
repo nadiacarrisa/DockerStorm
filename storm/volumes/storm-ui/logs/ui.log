@@ -1,0 +1,12 @@
+2019-06-15 05:14:36.724 o.a.s.u.core main [INFO] Starting ui server for storm version '1.0.6'
+2019-06-15 05:14:36.737 o.a.s.d.m.MetricsUtils main [INFO] Using statistics reporter plugin:org.apache.storm.daemon.metrics.reporters.JmxPreparableReporter
+2019-06-15 05:14:36.739 o.a.s.d.m.r.JmxPreparableReporter main [INFO] Preparing...
+2019-06-15 05:14:36.762 o.a.s.d.common main [INFO] Started statistics report plugin...
+2019-06-15 05:14:36.874 o.a.s.s.o.e.j.s.Server main [INFO] jetty-7.x.y-SNAPSHOT
+2019-06-15 05:14:36.947 o.a.s.s.o.e.j.s.h.ContextHandler main [INFO] started o.a.s.s.o.e.j.s.ServletContextHandler{/,null}
+2019-06-15 05:14:37.036 o.a.s.s.o.e.j.s.AbstractConnector main [INFO] Started SelectChannelConnector@0.0.0.0:8080
+2019-06-15 05:14:43.433 o.a.s.u.NimbusClient qtp225511870-15 [INFO] Found leader nimbus : f725c4278be5:6627
+2019-06-15 05:14:44.339 o.a.s.u.NimbusClient qtp225511870-17 [INFO] Found leader nimbus : f725c4278be5:6627
+2019-06-15 05:14:44.376 o.a.s.u.NimbusClient qtp225511870-16 [INFO] Found leader nimbus : f725c4278be5:6627
+2019-06-15 05:14:44.382 o.a.s.u.NimbusClient qtp225511870-19 [INFO] Found leader nimbus : f725c4278be5:6627
+2019-06-15 05:14:44.394 o.a.s.u.NimbusClient qtp225511870-18 [INFO] Found leader nimbus : f725c4278be5:6627
